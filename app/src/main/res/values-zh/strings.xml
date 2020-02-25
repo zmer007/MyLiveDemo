@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LiveDemo</string>
+    <string name="action_settings">设置</string>
+
+    <string name="input_room_number">输入房间号</string>
+    <string name="i_m_host">我是主播</string>
+    <string name="i_m_audience">我是观众</string>
+</resources>
