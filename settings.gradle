@@ -1,2 +1,3 @@
 rootProject.name='MyLiveDemo'
 include ':app'
+include ':ksylivestream'
