@@ -411,12 +411,12 @@ public class BaseCameraActivity extends Activity implements
     }
   }
 
-  protected void onSwitchCamera() {
+  public void onSwitchCamera(View v) {
     // 切换前后摄像头
     mStreamer.switchCamera();
   }
 
-  protected void onFlashClick(View v) {
+  public void onFlashClick(View v) {
     if (mIsFlashOpened) {
       // 关闭闪光灯
       mStreamer.toggleTorch(false);

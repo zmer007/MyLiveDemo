@@ -1,3 +1,4 @@
-rootProject.name='MyLiveDemo'
+rootProject.name = 'MyLiveDemo'
 include ':app'
 include ':ksylivestream'
+include ':vlc:player'

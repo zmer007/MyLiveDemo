@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.iyh.ksylivestream.BaseCameraActivity
+import com.iyh.player.PlayerActivity
 import com.ksyun.media.streamer.util.device.DeviceInfoTools
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -46,7 +47,14 @@ class MainActivity : AppCompatActivity() {
     BaseCameraActivity.startActivity(this, config, BaseCameraActivity::class.java)
   }
 
-  fun onAudienceClicked(view: View) {}
+  fun onAudienceClicked(view: View) {
+    if (roomNumber.text.isEmpty()) {
+      Toast.makeText(this, "Please input Room ID", Toast.LENGTH_SHORT).show()
+      return
+    }
+    val url = "$baseUrl/${roomNumber.text}"
+    PlayerActivity.launch(this, url)
+  }
 
   companion object {
     const val baseUrl = "rtmp://39.105.96.172/live/livestream"
